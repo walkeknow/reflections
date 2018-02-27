@@ -1,0 +1,60 @@
+When would you want to use a remote repository rather than keeping all your work
+local?
+
+    To collaborate with other people
+
+Why might you want to always pull changes manually rather than having Git
+automatically stay up-to-date with your remote repository?
+
+    This could publish code which is still in development and not meant to be viewed
+    by others
+
+Describe the differences between forks, clones, and branches.  When would you
+use one instead of another?
+
+    branches-   creating a seperate version of our own code (a different language or 
+                an experiment). A branch can be created as git branch [branch-name]
+                After a branch is merged it can/should be deleted using git 
+                branch -d [branch-name]
+ 
+    clones  -   copying a repository using a remote or copying a local repository
+                as it is, does not update changes to GitHub after modifications
+    
+    forks   -   cloning a Git repository into any of your own git repository, no 
+                changes are made to the local machine unless git pull is executed, 
+                in which case the origin-master is updated
+
+                A code should be forked when we want to create our version of someone's
+                code while letting them know it and directly updating on GitHub rather
+                than cloning and then pushing
+
+                Forks are publicly visible
+
+What is the benefit of having a copy of the last known state of the remote
+stored locally?
+
+    Having a copy of the last known state of a remote stored locally (using git fetch)
+    would update the remote (origin-master) but will not update master, so if we
+    need to go offline, we can make changes to the fetched branch before merging
+    it into our master branch and pushing
+
+    A git pull = fetch + merge, so use it if you do not want to make major changes 
+    to origin-master and just compare it with master while merging the two files. 
+
+How would you collaborate without using Git or GitHub?  What would be easier,
+and what would be harder?
+
+    Without Git or GitHub, acess can be given to files using a cloud service to others
+    but it would be really difficult to review the changes without version control
+    write acess were given to everyone, unwanted changes by other users could be done 
+    to our code, that is why the pull request feature of GitHub plays an important role 
+    
+When would you want to make changes in a separate branch rather than directly in
+master?  What benefits does each approach have?
+
+    Workflow when making changes in a separate branch is more complicated than working
+    directly in master, especially when you need to stay up-to-date with changes 
+    others are making. Rather than simply pulling and pushing, you need to pull 
+    changes into your local master branch, merge the local master into your branch 
+    (different-oil, in our case), then push your branch to the remote before finally 
+    merging your branch into master, either locally or on GitHub.
