@@ -1,0 +1,48 @@
+What happens when you initialize a repository? Why do you need to do it?
+    
+    .git directory is added in it
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+    
+    A staging area provides a confirmation stage before we can actually commit the 
+    file in our local repository to our git branch.
+
+    Also if we discover something that we do not want to commit while in the staging
+    area, we could remove the file from the area using reset or delete the file
+    altogether using reset --hard
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+    
+    git diff --staged will compare the version in our staging area to the last 
+    commited version.
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+Branches could help in primarily two cases:
+  - Making an experimental change which we do not want to include in our main code 
+    but still want it to be released and accesible to the public
+  - Creating different versions from the same code eg. two similar apps like Word
+    Cookies and Word Crossword that use the same parent code
+
+How do the diagrams help you visualize the branch structure?
+
+    The diagrams help in knowing the parents of a particular branch so that a branch
+    can be merged accordingly in the future with master without being isolated, also 
+    branches have specific names to them making them easier to merge by name and 
+    not id
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+    Merging two branches can add or remove data from the code, we can resolve it
+    by opening the file where there is a conflict if any by modifying the
+    appropriate highlighted lines
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+
+    Git's automatic merging could be disadvantageous as it may modify some sensetive
+    code which is not what the user may have wanted.
