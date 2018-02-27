@@ -58,3 +58,23 @@ master?  What benefits does each approach have?
     changes into your local master branch, merge the local master into your branch 
     (different-oil, in our case), then push your branch to the remote before finally 
     merging your branch into master, either locally or on GitHub.
+
+    In a collabarative environment it is required for people to make changes in 
+    branches and ask the original owner to the master branch to pull our
+    changes in their master branch using pull requests in a forked repository. 
+    The owner then can review the changes and comment on it and can choose to 
+    suggest edits or add it to their master branch, in case of no merge conflicts.
+    If the merge pull request button for the owner doesn't show up as green then
+    there is a merge conflict in some common lines and the owner may ask to review
+    the changes in which case we should:
+
+    - pull (fetch + merge can be used if more changes are to be made offline) 
+      the repo to our local "master"
+
+    - merge changes to the local branch, resolve merge conflict, add, commit and push
+      the "branch" using remote
+
+    After this, the owner will get an updated pull request and he would be able to click
+    on the merge pull request. After this automatically add a commit with a message
+    reading that you had made the following commit to the owner's master branch by
+    merging your local branch using a remote.
