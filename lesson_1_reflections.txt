@@ -31,6 +31,7 @@ How might using version control make you more confident to make changes that
 could break something?
 
     If a newer version is buggy I could easily switch back to the older stable one
+    using git checkout
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
